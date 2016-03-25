@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="jquery-2.2.2.min.js"></script>
+
+<div id="div1">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+    <button type="button">new div</button>
+</div>
+
+<script>
+    $( document ).ready(function() {
+
+    $( "button" ).on( "click", function() {
+        var para = document.createElement("p");
+        var node = document.createTextNode("This is new.");
+        para.appendChild(node);
+        var element = document.getElementById("div1");
+        element.appendChild(para);
+
+        console.log( "A button with the alert class was clicked!" );
+    });
+
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+<script src="../scripts/jquery-2.2.2.min.js"></script>
+
+<div id="container">
+    <ul id="list">
+        <li><a href="http://domain1.com">Item #1</a></li>
+        <li><a href="/testfolder/1">Item #2</a></li>
+        <li><a href="/testfolder/2">Item #3</a></li>
+        <li><a href="http://domain4.com">Item #4</a></li>
+    </ul>
+</div>
+<button type="button">new line</button>
+<script>
+    $( document ).ready(function() {
+        $( "#list a" ).on( "click", function( event ) {
+            event.preventDefault();
+            console.log( $( this ).text() );
+        });
+        $( "button" ).on( "click", function() {
+            $( "#list" ).append( "<li><a href='http://newdomain.com'>Item #5</a></li>" );
+        });
+    });
+
+</script>
+</body>
+</html>
